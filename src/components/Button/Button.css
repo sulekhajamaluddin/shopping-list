@@ -1,0 +1,54 @@
+@font-face {
+  font-family: textFont-Regular;
+  src: url(../../../public/NotoSans-Regular.ttf);
+}
+
+.btn {
+  color: #ffffff;
+  background-color: #0058ab;
+  font-family: textFont-Regular;
+  padding: 0.5em;
+  margin-top: 1.5em;
+}
+
+.add-item-btn {
+  width: 25em;
+  height: 55px;
+  border-radius: 40px;
+}
+
+.add-item-list-btn {
+  width: 20em;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.sort-button {
+  margin: 0 0.1em 0 0.7em;
+  background: none;
+  border: none;
+  text-decoration: underline;
+}
+
+.link {
+  background: none;
+  border: none;
+  text-decoration: underline;
+  margin-top: 1.5em;
+}
+
+.btn:hover,
+.add-item-btn:hover,
+.add-item-list-btn:hover,
+.inline:hover,
+.sort-button:hover,
+.link:hover {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 270px) and (max-width: 400px) {
+  .add-item-btn {
+    width: 10em;
+    height: 3em;
+  }
+}
