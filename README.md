@@ -23,8 +23,6 @@ After adding the items as a first time user, the user is shown the shopping list
 
 The user can ##`SORT` the items in the shopping list using the ##`NAME` and ##`PRICE` options in the heading section.
 
-![Name Sort](images/NameSort.png?raw=true "NameSort")
-
 ## The Purchased Items
 
 Once an item is purchased, it can be marked as bought by checking the checkbox. The item immediately moves from the shopping list view and is accomodated in the ## `Purchased Items` section.
