@@ -1,3 +1,15 @@
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 2;
+}
+
 .modal {
   width: 450px;
   height: 450px;
@@ -6,7 +18,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   border: black solid 1px;
@@ -26,44 +38,18 @@
   }
 }
 
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-.overlay {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(255, 255, 255, 0.8);
-  z-index: 2;
-}
-
 .input-holder {
-  margin-top: 2em;
+  margin-top: 1em;
+  width: 20em;
   display: flex;
   flex-direction: column;
 }
 
 .modal input {
   margin-top: 0.5em;
-  width: 20em;
+  width: 100%;
   height: 2.5em;
   padding: 0.2em;
-}
-
-.button-holder {
-  width: 60%;
-  display: flex;
-  justify-content: space-around;
 }
 
 .icon {
@@ -75,27 +61,30 @@
   right: 7%;
 }
 
-/* .success {
-  height: 4px;
-  background-color: rgb(4, 211, 4);
-} */
-
-@media screen and (min-width: 370px) and (max-width: 415px) {
+@media screen and (min-width: 330px) and (max-width: 455px) {
   .modal {
     width: 90%;
     height: 60%;
   }
+
   .icon {
     height: 2em;
     width: 2em;
     top: 5%;
     right: 5%;
   }
+
+  .modal input {
+    margin-top: 0.5em;
+    width: 100%;
+    height: 2.5em;
+    padding: 0.2em;
+  }
 }
 
-@media screen and (min-width: 275px) and (max-width: 369px) {
+@media screen and (min-width: 270px) and (max-width: 329px) {
   .modal {
-    width: 100%;
+    width: 85%;
     height: 60%;
   }
 
@@ -104,5 +93,16 @@
     width: 2em;
     top: 5%;
     right: 5%;
+  }
+
+  .input-holder {
+    width: 16em;
+  }
+
+  .modal input {
+    margin-top: 0.5em;
+    width: 100%;
+    height: 2.5em;
+    padding: 0.2em;
   }
 }

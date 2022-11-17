@@ -1,11 +1,7 @@
-// import { useContext } from "react";
 import "./Home.css";
 import { Button, Logo, Image } from "../index";
-// import { ModalContext } from "../../context/modalContext";
 
 const Home = ({ handleAddItem, openModal, setOpenModal }) => {
-  // const { openModal, setOpenModal } = useContext(ModalContext);
-
   return (
     <div className="home-container">
       <section className="logo-holder">
@@ -28,8 +24,7 @@ const Home = ({ handleAddItem, openModal, setOpenModal }) => {
           below.
           <br />
           When you click on the button below, a pop up will ask you for the name
-          and price of the item. After you add the item, you can also upload an
-          image by clicking on the camera icon.
+          and price of the item you wish to buy.
         </p>
       </section>
       <section>

@@ -44,7 +44,7 @@ const ItemList = ({ handleAddItem, openModal, setOpenModal }) => {
         {noItemsOnToBuyList ? (
           <Message
             classRequired={"message"}
-            alertMessage={"PLEASE ADD AN ITEM"}
+            alertMessage={"Please add an item."}
           />
         ) : (
           <section className="item-list">
@@ -86,7 +86,10 @@ const ItemList = ({ handleAddItem, openModal, setOpenModal }) => {
       </section>
       <section className="purchased-items-list">
         {showPurchasedItemsList && noItemsPurchased && (
-          <Message classRequired={"message"} alertMessage={"NOTHING TO SHOW"} />
+          <Message
+            classRequired={"message"}
+            alertMessage={"No items to show."}
+          />
         )}
         {showPurchasedItemsList &&
           !noItemsPurchased &&

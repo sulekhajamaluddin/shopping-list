@@ -9,6 +9,10 @@
   background-color: rgb(253, 249, 249);
 }
 
+.label {
+  color: red;
+}
+
 .success {
   background-color: rgb(128, 250, 128);
 }
@@ -23,8 +27,10 @@
   height: 3em;
 }
 
-@media screen and (min-width: 270px) and (max-width: 400px) {
-  .message {
-    margin-top: 1.2em;
+@media screen and (min-width: 270px) and (max-width: 328px) {
+  .success,
+  .danger {
+    width: 16em;
+    height: 3em;
   }
 }

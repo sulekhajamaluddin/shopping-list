@@ -1,6 +1,6 @@
-export const clearAlert = (setAddSuccess) => {
+export const clearAlert = (setMessage) => {
   setTimeout(() => {
-    setAddSuccess(false);
+    setMessage(false);
   }, 2000);
 };
 
@@ -15,16 +15,40 @@ export const clearInputFields = (item, setItem) => {
 export const handleAddItemToList = (
   item,
   setItem,
-  setError,
-  setAddSuccess,
   items,
-  setItems
+  setItems,
+  setErrorType,
+  setAddSuccess
 ) => {
-  if (item.itemName === "" || item.itemPrice === "") {
-    setError(true);
+  const isAnyFieldEmpty = item.itemName === "" || item.itemPrice === "";
+  const isPriceNotANumber = isNaN(item.itemPrice);
+
+  if (isAnyFieldEmpty || isPriceNotANumber) {
+    if (isAnyFieldEmpty) {
+      setErrorType((errorType) => {
+        return {
+          ...errorType,
+          emptyfields: true,
+        };
+      });
+    }
+    if (isPriceNotANumber) {
+      setErrorType((errorType) => {
+        return {
+          ...errorType,
+          priceNotANumber: true,
+        };
+      });
+    }
   } else {
-    setError(false);
     setItems([...items, item]);
+    setErrorType((errorType) => {
+      return {
+        ...errorType,
+        emptyfields: false,
+        priceNotANumber: false,
+      };
+    });
     setAddSuccess(true);
     clearInputFields(item, setItem);
     clearAlert(setAddSuccess);

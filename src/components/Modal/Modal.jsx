@@ -15,10 +15,12 @@ const initialItem = {
 
 const Modal = ({ openModal, setOpenModal }) => {
   const { items, setItems } = useContext(ItemsContext);
-
   const [item, setItem] = useState(initialItem);
   const [addSuccess, setAddSuccess] = useState(false);
-  const [error, setError] = useState(false);
+  const [errorType, setErrorType] = useState({
+    emptyfields: false,
+    priceNotANumber: false,
+  });
 
   return (
     <div className="overlay">
@@ -27,13 +29,13 @@ const Modal = ({ openModal, setOpenModal }) => {
           {addSuccess && (
             <Message
               classRequired={"message success"}
-              alertMessage={"ITEM ADDED SUCCESSFULLY!!"}
+              alertMessage={"Item added succesfully!!"}
             />
           )}
-          {error && (
+          {errorType.emptyfields && (
             <Message
               classRequired={"message danger"}
-              alertMessage={"ALL FIELDS ARE REQUIRED!!"}
+              alertMessage={"Please fill in all the fields."}
             />
           )}
           <AiFillCloseCircle
@@ -62,7 +64,6 @@ const Modal = ({ openModal, setOpenModal }) => {
             type="text"
             id="itemPrice"
             name="itemPrice"
-            placeholder="0.0"
             value={item.itemPrice}
             onChange={(e) => {
               setItem({
@@ -71,6 +72,12 @@ const Modal = ({ openModal, setOpenModal }) => {
               });
             }}
           />
+          {errorType.priceNotANumber && (
+            <Message
+              classRequired={"label"}
+              alertMessage={"Please enter a number"}
+            />
+          )}
           <br />
         </div>
         <div className="button-holder">
@@ -81,10 +88,10 @@ const Modal = ({ openModal, setOpenModal }) => {
               handleAddItemToList(
                 item,
                 setItem,
-                setError,
-                setAddSuccess,
                 items,
-                setItems
+                setItems,
+                setErrorType,
+                setAddSuccess
               )
             }
           />

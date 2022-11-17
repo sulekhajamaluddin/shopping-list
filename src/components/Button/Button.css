@@ -51,4 +51,9 @@
     width: 10em;
     height: 3em;
   }
+
+  .add-item-list-btn {
+    width: 16em;
+    height: 3em;
+  }
 }
