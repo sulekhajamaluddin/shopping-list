@@ -33,7 +33,7 @@ This section can be viewed by clicking on the ##`Show Purchased Items`.
 
 In case the user wants to add the item back to the main shopping list, it can be done by checking the checkbox of the item in the Purchased Items section.
 
-![Purchased Items](images/PurchasedItems.png.png?raw=true "Purchased Items")
+![Purchased Items](images/PurchasedItems.png?raw=true "Purchased Items")
 
 ## Get the project
 
