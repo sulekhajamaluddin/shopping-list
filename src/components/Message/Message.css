@@ -27,7 +27,7 @@
   height: 3em;
 }
 
-@media screen and (min-width: 270px) and (max-width: 328px) {
+@media screen and (max-width: 600px) {
   .success,
   .danger {
     width: 16em;

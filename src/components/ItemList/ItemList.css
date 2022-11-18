@@ -49,7 +49,7 @@
   flex-direction: column;
 }
 
-@media screen and (min-width: 270px) and (max-width: 400px) {
+@media screen and (max-width: 600px) {
   .item-list-container {
     width: 100%;
   }

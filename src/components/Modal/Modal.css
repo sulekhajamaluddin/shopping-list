@@ -61,48 +61,62 @@
   right: 7%;
 }
 
-@media screen and (min-width: 330px) and (max-width: 455px) {
+@media screen and (max-width: 400px) {
   .modal {
-    width: 90%;
-    height: 60%;
+    width: 275px;
+    height: 350px;
+    top: 35%;
+    left: 50%;
   }
 
   .icon {
-    height: 2em;
-    width: 2em;
-    top: 5%;
-    right: 5%;
-  }
-
-  .modal input {
-    margin-top: 0.5em;
-    width: 100%;
-    height: 2.5em;
-    padding: 0.2em;
-  }
-}
-
-@media screen and (min-width: 270px) and (max-width: 329px) {
-  .modal {
-    width: 85%;
-    height: 60%;
-  }
-
-  .icon {
-    height: 2em;
-    width: 2em;
-    top: 5%;
-    right: 5%;
+    height: 1.5em;
+    width: 1.5em;
+    top: 3%;
+    right: 4%;
   }
 
   .input-holder {
     width: 16em;
   }
+}
 
-  .modal input {
-    margin-top: 0.5em;
-    width: 100%;
-    height: 2.5em;
-    padding: 0.2em;
+@media screen and (min-width: 401px) and (max-width: 600px) {
+  .modal {
+    width: 350px;
+    height: 350px;
+    top: 35%;
+    left: 50%;
+  }
+
+  .icon {
+    height: 1.5em;
+    width: 1.5em;
+    top: 3%;
+    right: 4%;
+  }
+
+  .input-holder {
+    width: 16em;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 768px) {
+  .modal {
+    width: 400px;
+    height: 400px;
+    top: 35%;
+    left: 50%;
+  }
+
+  .icon {
+    height: 2em;
+    width: 2em;
+    top: 3%;
+    right: 4%;
+  }
+
+  .input-holder {
+    width: 20em;
   }
 }

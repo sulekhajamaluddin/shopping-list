@@ -8,9 +8,9 @@
   width: 26%;
 }
 
-@media screen and (min-width: 270px) and (max-width: 400px) {
+@media screen and (max-width: 600px) {
   .main-image {
-    height: 10em;
+    height: 15em;
     margin-left: -2.5em;
   }
 

@@ -46,14 +46,18 @@
   cursor: pointer;
 }
 
-@media screen and (min-width: 270px) and (max-width: 400px) {
+@media screen and (max-width: 600px) {
   .add-item-btn {
-    width: 10em;
+    width: 16em;
     height: 3em;
   }
 
   .add-item-list-btn {
     width: 16em;
     height: 3em;
+  }
+
+  .btn {
+    margin-top: 0em;
   }
 }
