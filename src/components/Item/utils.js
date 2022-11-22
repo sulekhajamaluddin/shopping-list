@@ -8,6 +8,7 @@ export const toggleItemPurchase = (items, itemClicked) => {
   });
   return updatedList;
 };
+// put a empty line between functions
 export const handleCheckBoxEvent = (e, itemClicked, items, setItems) => {
   if (e.target.checked) {
     const updatedList = toggleItemPurchase(items, itemClicked);

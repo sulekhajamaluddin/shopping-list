@@ -13,6 +13,7 @@ const initialItem = {
   itemPurchased: false,
 };
 
+// This code is too long, please break it down into smaller sub components
 const Modal = ({ openModal, setOpenModal }) => {
   const { items, setItems } = useContext(ItemsContext);
   const [item, setItem] = useState(initialItem);

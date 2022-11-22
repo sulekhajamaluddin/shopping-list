@@ -6,9 +6,10 @@ import { Home, ItemList, Modal } from "../index";
 
 const MainPage = ({ openModal, setOpenModal }) => {
   const { items } = useContext(ItemsContext);
-  const noItemsInLocalStorage = items.length === 0;
+  const noItemsInLocalStorage = items.length === 0; // good name
 
   return (
+    // Code inside Code (Nesting) This code looks hard to read, i will explain how to simplify it
     <div className="container">
       <div className="main-container">
         {noItemsInLocalStorage ? (

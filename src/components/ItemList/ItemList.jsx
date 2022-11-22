@@ -5,6 +5,7 @@ import { Button, Item, Message } from "../index";
 import { handleShowListToggle, handleNameSort, handlePriceSort } from "./utils";
 import { ItemsContext } from "../../context";
 
+// This file is bad, is 100 lines. It needs to be broken down into smaller files
 const ItemList = ({ handleAddItem, openModal, setOpenModal }) => {
   const { items, setItems } = useContext(ItemsContext);
   const [showPurchasedItemsList, setShowPurchasedItemsList] = useState(false);
