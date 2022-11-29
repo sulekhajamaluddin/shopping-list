@@ -9,7 +9,7 @@ import { ItemsContext } from "../context";
  * 2. Rename App.js to App.jsx so I know it is a React component
  * 3. Put the "export default" on the same line as function App
  */
-function App() {
+export default function App() {
   const [openModal, setOpenModal] = useState(false);
   const [items, setItems] = useState(getItemsFromLocalStorage() || []);
 
@@ -20,11 +20,7 @@ function App() {
   return (
     // Comments -1 don't leave code commented. Delete it or put it on other branch
     <ItemsContext.Provider value={{ items, setItems }}>
-      {/* <ModalContext.Provider value={{ openModal, setOpenModal }}> */}
       <MainPage openModal={openModal} setOpenModal={setOpenModal} />
-      {/* </ModalContext.Provider> */}
     </ItemsContext.Provider>
   );
 }
-
-export default App;

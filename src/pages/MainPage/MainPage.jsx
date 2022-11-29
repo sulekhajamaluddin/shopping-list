@@ -2,7 +2,7 @@ import "./MainPage.css";
 import { useContext } from "react";
 import { handleAddItem } from "./utils";
 import { ItemsContext } from "../../context";
-import { Home, ItemList, Modal } from "../index";
+import { Home, ItemList, Modal } from "../../components/index";
 
 const MainPage = ({ openModal, setOpenModal }) => {
   const { items } = useContext(ItemsContext);

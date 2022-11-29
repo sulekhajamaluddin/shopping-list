@@ -23,22 +23,24 @@ const Modal = ({ openModal, setOpenModal }) => {
     priceNotANumber: false,
   });
 
+  const newObject = {
+    ...item,
+    id: uuidv4(),
+    itemName: e.target.value,
+  };
+  const ErrorMessage = (
+    <Message css={"message danger"} text={"Please fill in all the fields."} />
+  );
+  const SuccessMesage = (
+    <Message css={"message success"} text={"Item added succesfully!!"} />
+  );
+
   return (
     <div className="overlay">
       <div className="modal">
         <div className="close">
-          {addSuccess && (
-            <Message
-              classRequired={"message success"}
-              alertMessage={"Item added succesfully!!"}
-            />
-          )}
-          {errorType.emptyfields && (
-            <Message
-              classRequired={"message danger"}
-              alertMessage={"Please fill in all the fields."}
-            />
-          )}
+          {addSuccess && SuccessMessage}
+          {errorType.emptyfields && ErrorMessage}
           <AiFillCloseCircle
             className="icon"
             onClick={() => handleClose(openModal, setOpenModal)}
@@ -52,11 +54,7 @@ const Modal = ({ openModal, setOpenModal }) => {
             name="itemName"
             value={item.itemName}
             onChange={(e) => {
-              setItem({
-                ...item,
-                id: uuidv4(),
-                itemName: e.target.value,
-              });
+              setItem(newObject);
             }}
           />
           <br />
@@ -84,7 +82,7 @@ const Modal = ({ openModal, setOpenModal }) => {
         <div className="button-holder">
           <Button
             text={"Add"}
-            classRequired={"btn add-item-list-btn"}
+            css={"btn add-item-list-btn"}
             onClick={() =>
               handleAddItemToList(
                 item,
